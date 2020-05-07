@@ -13,7 +13,7 @@ following `run` script:
 ```
 #!/bin/sh
 
-export USER="${PWD##*-}"
+export USER="<username>"
 export HOME="$(getent passwd "$USER" | cut -d: -f6)"
 
 groups="$(id -Gn "$USER" | tr ' ' ':')"
