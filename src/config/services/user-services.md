@@ -14,7 +14,7 @@ following `run` script:
 #!/bin/sh
 
 export USER="<username>"
-export HOME="$(getent passwd "$USER" | cut -d: -f6)"
+export HOME="/home/<username>"
 
 groups="$(id -Gn "$USER" | tr ' ' ':')"
 svdir="$HOME/service"
