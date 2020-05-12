@@ -28,7 +28,8 @@ user. [chpst(8)](https://man.voidlinux.org/chpst.8) does not read groups on its
 own but expects the user to list all required groups spearated by a `:` (colon).
 In the previous example the `id` and `tr` pipe is used to create a list of all
 the users groups in a way [chpst(8)](https://man.voidlinux.org/chpst.8)
-understands it.
+understands it. Note that we export `$USER` and `$HOME` because some user
+services may not work without them.
 
 The user can then create new service or symlinks to them in the
 `/home/<username>/service` directory. To control the services using
